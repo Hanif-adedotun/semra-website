@@ -1,15 +1,21 @@
-import Image from "next/image";
+"use client";
+
 import Nav from "../nav";
 import Header from "./header";
 import Timing from "./timing";
+import { Footer } from "./footer";
+import Media from "./pictures";
 
 export default function LandingPage() {
   return (
-     // bg-[url('/bg-pattern-2.jpg')]
-    <main className="w-screen bg-auto bg-repeat bg-center bg-left-top ">
+    <main
+      className="w-screen  overflow-hidden"
+    >
       <Nav />
       <Header />
-      <Timing/>
+      <Timing />
+      <Media/>
+      <Footer />
     </main>
   );
 }
