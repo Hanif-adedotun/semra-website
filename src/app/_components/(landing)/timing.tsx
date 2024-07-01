@@ -13,7 +13,7 @@ export default function Timing() {
       <div className="flex items-center justify-between ml-[10%] bg-transparent">
         <h1 className="text-3xl font-bold text-primary">Prayer Times</h1>
       </div>
-      <Card className="mt-4 w-[85%] min-h-96 px-4 py-12 mx-auto shadow-sm rounded-lg grid grid-cols-1 gap-4 sm:gap-0 sm:grid-cols-2 bg-white shadow-sm">
+      <Card className="mt-4 w-[85%] min-h-96 px-12 py-20 mx-auto shadow-sm rounded-lg grid grid-cols-1 gap-4 sm:gap-0 sm:grid-cols-2 bg-white shadow-sm">
         <CardContent className="flex flex-col justify-start gap-6 sm:gap-12">
           <h1 className="text-2xl font-bold text-primary">Welcome to SEMRA</h1>
           <p>

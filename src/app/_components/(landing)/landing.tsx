@@ -5,6 +5,7 @@ import Header from "./header";
 import Timing from "./timing";
 import { Footer } from "./footer";
 import Media from "./pictures";
+import Services from "./services";
 
 export default function LandingPage() {
   return (
@@ -15,6 +16,7 @@ export default function LandingPage() {
       <Header />
       <Timing />
       <Media/>
+      <Services/>
       <Footer />
     </main>
   );
