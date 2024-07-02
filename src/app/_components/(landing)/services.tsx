@@ -8,25 +8,25 @@ const services = [
     logo: "/quran.svg",
     title: "Quran Learning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     logo: "/sadaqa.svg",
     title: "Quran Learning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     logo: "/dua.svg",
     title: "Quran Learning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     logo: "/Allah.svg",
     title: "Quran Learning",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 export default function Services() {
@@ -34,7 +34,7 @@ export default function Services() {
     <Card className="mt-[80px] w-[85%] p-20 bg-semraGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 gap-4 sm:gap-0 justify-items-start sm:grid-cols-2">
       <CardContent className="flex flex-col text-white justify-start pt-8 gap-2 sm:gap-4">
         <h1 className="text-2xl font-bold text-primary">Our Services</h1>
-        <p>
+        <p className="text-base">
           Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
           sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -45,7 +45,7 @@ export default function Services() {
           mollit anim id est laborum.{" "}
         </p>
         <Link href={"/about"}>
-          <Button className="bg-semraYellow rounded-md text-white">
+          <Button className="bg-semraYellow rounded-md text-white w-64 h-12">
             Read More
           </Button>
         </Link>
@@ -53,7 +53,7 @@ export default function Services() {
 
       <CardContent className="grid grid-cols-2 grid-row-2">
         {services.map((service, index) => (
-          <div key={index} className={`hover:bg-white text-white hover:text-black rounded-md gap-2 p-8`}>
+          <div key={index} className={`hover:bg-white text-white hover:text-black rounded-md gap-2 p-8 cursor-pointer`}>
             <Image
               src={service.logo}
               alt={service.title}

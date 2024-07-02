@@ -27,8 +27,8 @@ import Image from "next/image";
 
 const images = [
   "/pictures/mosque1.jpeg",
-//   "/pictures/mosque2.jpeg",
-//   "/pictures/mosque3.jpeg",
+  "/pictures/mosque2.jpeg",
+  "/pictures/mosque3.jpeg",
 ];
 export default function Media() {
   const plugin = React.useRef(
@@ -36,33 +36,40 @@ export default function Media() {
   );
 
   return (
-    <Card className="bg-[#E6F8EF] min-h-96 w-[85%] sm:w-[60%] mx-auto mt-48">
+    <Card className="bg-[#E6F8EF] min-h-96 w-[85%] mx-auto mt-[80px] flex justify-between">
       <Carousel
         plugins={[plugin.current]}
-        className="w-full h-full"
+        className="w-64 h-64 border-2 border-black"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent>
           {images.map((image, index) => (
-          <CarouselItem key={index}>
+            <CarouselItem key={index}>
               <Card>
-                <CardContent className="w-full h-full">
+                <CardContent className="w-64 h-64 border-2 border-green relative">
                   <Image
                     src={image}
-                    className="object-cover"
+                    className="object-cover w-full h-full border-2 border-red"
                     alt={"Image " + index}
                     fill
                   />
                 </CardContent>
               </Card>
-              
-          </CarouselItem>
+            </CarouselItem>
           ))}
         </CarouselContent>
         {/* <CarouselPrevious />
         <CarouselNext /> */}
       </Carousel>
+
+      <CardContent className="flex flex-col justify-center gap-2 sm:gap-4">
+        <ul>
+          <li>Serene environment</li>
+          <li>Secure premises</li>
+          <li>24/7 security</li>
+        </ul>
+      </CardContent>
     </Card>
   );
 }

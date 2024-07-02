@@ -27,7 +27,7 @@ export default function Timing() {
             officia deserunt mollit anim id est laborum.{" "}
           </p>
           <Link href={"/about"}>
-            <Button className="bg-semraYellow rounded-md text-white">
+            <Button className="bg-semraYellow rounded-md text-white text-base">
               Read More
             </Button>
           </Link>
