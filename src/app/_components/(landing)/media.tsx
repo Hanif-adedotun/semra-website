@@ -36,10 +36,10 @@ export default function Media() {
   );
 
   return (
-    <Card className="bg-[#E6F8EF] min-h-96 w-[85%] mx-auto mt-[80px] flex justify-between">
+    <Card className="bg-[#E6F8EF] min-h-96 w-[85%] mx-auto mt-[80px] relative flex justify-between">
       <Carousel
         plugins={[plugin.current]}
-        className="w-64 h-64 border-2 border-black"
+        className="w-1/2 h-96 border-2 border-black absolute left-0 top-0"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
@@ -47,7 +47,7 @@ export default function Media() {
           {images.map((image, index) => (
             <CarouselItem key={index}>
               <Card>
-                <CardContent className="w-64 h-64 border-2 border-green relative">
+                <CardContent className="w-full h-96 border-2 border-green relative">
                   <Image
                     src={image}
                     className="object-cover w-full h-full border-2 border-red"
@@ -63,6 +63,8 @@ export default function Media() {
         <CarouselNext /> */}
       </Carousel>
 
+
+      <div></div> {/*//TODO: DO not remove this*/}
       <CardContent className="flex flex-col justify-center gap-2 sm:gap-4">
         <ul>
           <li>Serene environment</li>
