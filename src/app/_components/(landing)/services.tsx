@@ -31,7 +31,7 @@ const services = [
 ];
 export default function Services() {
   return (
-    <Card className="mt-[80px] w-[85%] p-20 bg-semraGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 gap-4 sm:gap-0 justify-items-start sm:grid-cols-2">
+    <Card className="mt-[80px] w-[85%] p-1 sm:p-20 bg-semraGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 gap-4 sm:gap-0 justify-items-start sm:grid-cols-2">
       <CardContent className="flex flex-col text-white justify-start pt-8 gap-2 sm:gap-4">
         <h1 className="text-2xl font-bold text-primary">Our Services</h1>
         <p className="text-base">

@@ -18,6 +18,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 const defaultPrices = [
   { name: "N2,000", value: 2000 },
@@ -55,7 +56,7 @@ export default function Donation() {
     console.log(values);
   }
   return (
-    <Card className="mt-[80px] w-[85%] p-20 bg-fadedGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-0 justify-items-start">
+    <Card className="mt-[80px] w-[85%] p-1 sm:p-20 bg-fadedGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-0 justify-items-start">
       <CardContent className="flex flex-col text-white justify-start pt-8 gap-2 sm:gap-4">
         <div className="w-full h-[300px] relative rounded-sm">
           <Image
@@ -82,13 +83,13 @@ export default function Donation() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="mx-auto my-8">
             <ToggleGroup
-              size={"lg"}
+              size={null}
               type="single"
-              className="gap-4 justify-start"
+              className="gap-4 justify-start flex-wrap sm:flex-nowrap"
             >
               {defaultPrices.map((price, index) => (
                 <ToggleGroupItem
-                  className="text-base data-[state=on]:bg-semraYellow/80 bg-semraYellow/10 hover:bg-semraYellow/30 text-semraYellow data-[state=on]:text-white hover:text-semraYellow"
+                  className="text-sm sm:text-base data-[state=on]:bg-semraYellow/80 bg-semraYellow/10 hover:bg-semraYellow/30 text-semraYellow data-[state=on]:text-white hover:text-semraYellow"
                   key={index}
                   value={price.value.toString()}
                 >
@@ -102,7 +103,7 @@ export default function Donation() {
               name="amount"
               render={({ field }) => (
                 <FormItem className="flex gap-2 justify-center items-center my-8 text-base">
-                  <FormLabel className="w-max">
+                  <FormLabel className="w-max text-nowrap">
                     Your pledge <span className="text-bold">₦</span>
                   </FormLabel>
                   <FormControl>
@@ -110,7 +111,7 @@ export default function Donation() {
                       placeholder="Enter custom amount"
                       type="number"
                       {...field}
-                      className="placeholder:opacity-10 rounded-[10px]"
+                      className="placeholder:opacity-10 rounded-[10px] outline:none border-0 bg-black/5"
                     />
                   </FormControl>
                   <FormMessage />
@@ -131,7 +132,7 @@ export default function Donation() {
                     <Input
                       placeholder="Your full name"
                       {...field}
-                      className="placeholder:opacity-10 rounded-[10px]"
+                      className="placeholder:opacity-10 rounded-[10px] outline:none border-0 bg-black/5"
                     />
                   </FormControl>
                   <FormMessage />
@@ -155,7 +156,7 @@ export default function Donation() {
                         placeholder="Your full name"
                         type="email"
                         {...field}
-                        className="placeholder:opacity-10 rounded-[10px]"
+                        className="placeholder:opacity-10 rounded-[10px] outline:none border-0 bg-black/5"
                       />
                     </FormControl>
                     <FormMessage />
@@ -172,10 +173,10 @@ export default function Donation() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="Your full name"
+                        placeholder="0902 343 2445"
                         type="number"
                         {...field}
-                        className="placeholder:opacity-10 rounded-[10px]"
+                        className="placeholder:opacity-10 rounded-[10px] outline:none border-0 bg-black/5"
                       />
                     </FormControl>
                     <FormMessage />
@@ -193,7 +194,7 @@ export default function Donation() {
                     <FormControl>
                       <Textarea
                         placeholder="Do you have any extra information to share?"
-                        className="resize-none"
+                        className="placeholder:opacity-10 rounded-[10px] resize-none outline:none border-0 bg-black/5"
                         {...field}
                       />
                     </FormControl>
@@ -203,26 +204,35 @@ export default function Donation() {
               />
 
               {/* Terms */}
-              <FormField
-                control={form.control}
-                name="terms"
-                render={({ field }) => (
-                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md w-full p-2 my-8">
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className="space-y-1 leading-none">
-                      <FormLabel>
-                        You agree to receive monthly reminders for your pledged
-                        payment
-                      </FormLabel>
-                    </div>
-                  </FormItem>
-                )}
-              />
+              <div>
+                <FormField
+                  control={form.control}
+                  name="terms"
+                  render={({ field }) => (
+                    <FormItem className="block flex flex-row items-start space-x-3 space-y-0 rounded-md w-full p-2 my-8">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>
+                          You agree to receive monthly reminders for your
+                          pledged payment
+                        </FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+              </div>
+
+              <Button
+                type="submit"
+                className="bg-semraYellow rounded-[10px] mx-auto text-white w-64 h-12"
+              >
+                Submit
+              </Button>
             </div>
           </form>
         </Form>

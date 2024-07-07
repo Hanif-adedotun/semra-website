@@ -20,27 +20,44 @@ const prayers = [
 export default function PrayerTable() {
   return (
     <Table>
-      <TableCaption>*All prayer times are in West Africa Time (WAT)</TableCaption>
+      <TableCaption>
+        *All prayer times are in West Africa Time (WAT)
+      </TableCaption>
       <TableHeader>
-        <TableRow>
-          <TableHead>Sallah</TableHead>
-          <TableHead>Adhan</TableHead>
-          <TableHead>Iqama</TableHead>
+        <TableRow className="border-0">
+          <TableHead className="mx-auto text-center text-base font-medium">
+            Name of Sallat
+          </TableHead>
+          <TableHead className="mx-auto text-center text-base font-medium">
+            Adhan
+          </TableHead>
+          <TableHead className="mx-auto text-center text-base font-medium">
+            Iqama
+          </TableHead>
         </TableRow>
       </TableHeader>
 
-      <TableBody>
-          {prayers.map((prayer) => (
-            <TableRow key={prayer.name}>
-              <TableCell className='flex gap-2 sm:gap-4'>
-                <Image src={prayer.logo} alt={prayer.name} className="w-6 h-6" width={12} height={12}/>
-                <span className="ml-2 font-medium">{prayer.name}</span>
-              </TableCell>
-              <TableCell>{prayer.adhan}</TableCell>
-              <TableCell>{prayer.iqhama}</TableCell>
-            </TableRow>
-
-          ))}
+      <TableBody className="border-0">
+        {prayers.map((prayer) => (
+          <TableRow key={prayer.name} className="border-0 ">
+            <TableCell className="flex gap-2 my-2 sm:gap-4 rounded-sm drop-shadow-sm bg-white w-36 px-4 py-2 mx-auto">
+              <Image
+                src={prayer.logo}
+                alt={prayer.name}
+                className="w-6 h-6"
+                width={12}
+                height={12}
+              />
+              <span className="ml-2 font-medium">{prayer.name}</span>
+            </TableCell>
+            <TableCell className="my-2 rounded-sm drop-shadow bg-white w-36 px-4 py-2 mx-auto">
+              {prayer.adhan}
+            </TableCell>
+            <TableCell className="my-2 rounded-sm drop-shadow bg-white w-36 px-4 py-2 mx-auto">
+              {prayer.iqhama}
+            </TableCell>
+          </TableRow>
+        ))}
       </TableBody>
     </Table>
   );
