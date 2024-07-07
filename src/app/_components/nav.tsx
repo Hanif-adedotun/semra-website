@@ -36,7 +36,7 @@ export default function Nav() {
       </div>
       <NavigationMenu className="fixed inset-x-0 top-[40px] z-50 bg-white w-screen">
         <NavigationMenuList className="flex justify-between h-14 p-4 items-center w-screen">
-          <Link href="#" className="flex items-center" prefetch={false}>
+          <Link href="/" className="flex items-center" prefetch={false}>
             <h3>SEMRA</h3>
             <span className="sr-only">Semra home</span>
           </Link>
@@ -59,7 +59,7 @@ export default function Nav() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Contact us
                 </NavigationMenuLink>

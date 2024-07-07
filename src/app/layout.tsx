@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import Nav from "./_components/nav";
+import { Footer } from "./_components/(landing)/footer";
 
 // const poppins = Poppins({ weight:"300" ,subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
@@ -17,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={raleway.className}>{children}</body>
+      <Nav />
+      <body className={`${raleway.className} mt-[80px]`}>{children}</body>
+      <Footer />
     </html>
   );
 }
