@@ -7,6 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --radius: 20px;
+  --accent-foreground: '#E6F8EF',
 }
 
 /* @media (prefers-color-scheme: dark) {

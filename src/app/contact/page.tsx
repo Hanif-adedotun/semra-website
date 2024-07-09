@@ -1,5 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { LucidePhoneCall, MailsIcon, MapIcon } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact us",
+};
 
 const Icon = ({ color }: { color: string }) => (
   <svg
@@ -20,15 +26,22 @@ const Icon = ({ color }: { color: string }) => (
 
 export default function Contact(){
      return (
-       <div className="w-screen h-screen bg-white overflow-hidden flex items-center justify-center">
+       <div className="w-screen min-h-max flex items-center justify-center py-20">
          <div>
-           <h2 className="font-semibold text-3xl text-center my-12">
+           <h2 className="font-semibold text-3xl text-center mb-20">
              Contact Us
            </h2>
-           <Card className="grid grid-cols-3 gap-48 border-0 shadow-none">
+           <Card className="grid grid-row-3 sm:grid-cols-3 gap-4 sm:gap-48 border-0 shadow-none">
              {/* Phone Number */}
              <CardContent className="flex flex-col items-center">
-               <Icon color="#E6F8EF" />
+               <div className="relative">
+                 <Icon color="#E6F8EF" />
+                 <MailsIcon
+                   color="black"
+                   size={50}
+                   className="absolute left-[62.5px] top-[62.5px]"
+                 />
+               </div>
                <Link
                  href="mailto:hello@semra.com.ng"
                  className="hover:text-semraGreen"
@@ -45,7 +58,14 @@ export default function Contact(){
 
              {/* Address */}
              <CardContent className="flex flex-col items-center text-center">
-               <Icon color="#FF98224D" />
+               <div className="relative">
+                 <Icon color="#FF98224D" />
+                 <MapIcon
+                   color="black"
+                   size={50}
+                   className="absolute left-[62.5px] top-[62.5px]"
+                 />
+               </div>
                <Link
                  href="https://maps.app.goo.gl/wYpZTfN2cwf5JVkP6"
                  className="hover:text-semraGreen"
@@ -56,15 +76,19 @@ export default function Contact(){
 
              {/* Phone */}
              <CardContent className="flex flex-col items-center">
-               <Icon color="#0192474D" />
+               <div className="relative">
+                 <Icon color="#0192474D" />
+                 <LucidePhoneCall
+                   color="black"
+                   size={50}
+                   className="absolute left-[62.5px] top-[62.5px]"
+                 />
+               </div>
                <Link href="tel:09011111111" className="hover:text-semraGreen">
-                 09011111111
+                 +234 888 888 8888
                </Link>
-               <Link
-                 href="https://www.semra.com.ng"
-                 className="hover:text-semraGreen"
-               >
-                 www.semra.com.ng
+               <Link href="tel:09011111111" className="hover:text-semraGreen">
+                 +234 888 888 8888
                </Link>
              </CardContent>
            </Card>

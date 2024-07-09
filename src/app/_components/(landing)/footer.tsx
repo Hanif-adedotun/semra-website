@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <div className="bg-black grid grid-cols-1 sm:grid-cols-4 w-full min-h-96 mt-48 items-start  gap-10 sm:gap-16 p-10 sm:p-24">
+    <div className="bg-black z-10 grid grid-cols-1 sm:grid-cols-4 w-full min-h-96 mt-48 items-start  gap-10 sm:gap-16 p-10 sm:p-24">
       {/* Section 1 */}
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 justify-start items-center">

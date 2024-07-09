@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import LandingPage from "./_components/(landing)/landing";
+
+export const metadata: Metadata = {
+  title: "Home Page",
+};
 
 export default function Home() {
   return (

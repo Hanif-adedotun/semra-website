@@ -17,10 +17,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <Nav />
-      <body className={`${raleway.className} mt-[80px]`}>{children}</body>
+      <body className={`${raleway.className} mt-[80px] bg-white`}>{children}</body>
       <Footer />
     </html>
   );
