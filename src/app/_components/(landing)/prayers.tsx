@@ -10,12 +10,42 @@ import {
 import Image from "next/image";
 
 const prayers = [
-  { logo: '/icons/fajr.svg',name: "jumah", adhan: "05:30 AM", iqhama: "05:30 AM" },
-  { logo: '/icons/fajr.svg', name: "fajr", adhan: "05:30 AM", iqhama: "05:30 AM" },
-  { logo: '/icons/dhur.svg', name: "dhuhur", adhan: "05:30 AM", iqhama: "05:30 AM" },
-  { logo: '/icons/asr.svg', name: "asr", adhan: "05:30 AM", iqhama: "05:30 AM" },
-  { logo: '/icons/maghrib.svg', name: "maghrib", adhan: "05:30 AM", iqhama: "05:30 AM" },
-  { logo: '/icons/isha.svg', name: "isha", adhan: "05:30 AM", iqhama: "05:30 AM" },
+  {
+    logo: "/icons/fajr.svg",
+    name: "jumah",
+    adhan: "05:30 AM",
+    iqhama: "05:30 AM",
+  },
+  {
+    logo: "/icons/fajr.svg",
+    name: "fajr",
+    adhan: "05:30 AM",
+    iqhama: "05:30 AM",
+  },
+  {
+    logo: "/icons/dhur.svg",
+    name: "dhuhur",
+    adhan: "05:30 AM",
+    iqhama: "05:30 AM",
+  },
+  {
+    logo: "/icons/asr.svg",
+    name: "asr",
+    adhan: "05:30 AM",
+    iqhama: "05:30 AM",
+  },
+  {
+    logo: "/icons/maghrib.svg",
+    name: "maghrib",
+    adhan: "05:30 AM",
+    iqhama: "05:30 AM",
+  },
+  {
+    logo: "/icons/isha.svg",
+    name: "isha",
+    adhan: "05:30 AM",
+    iqhama: "05:30 AM",
+  },
 ];
 export default function PrayerTable() {
   return (
@@ -39,8 +69,8 @@ export default function PrayerTable() {
 
       <TableBody className="border-0">
         {prayers.map((prayer) => (
-          <TableRow key={prayer.name} className="border-0 ">
-            <TableCell className="flex gap-2 my-2 sm:gap-4 rounded-sm drop-shadow-sm bg-white w-36 px-4 py-2 mx-auto">
+          <TableRow key={prayer.name} className="border-0">
+            <TableCell className="flex gap-2 my-2 md:gap-4 rounded-sm drop-shadow-sm bg-white w-36 px-4 py-2 mx-auto">
               <Image
                 src={prayer.logo}
                 alt={prayer.name}
@@ -48,12 +78,14 @@ export default function PrayerTable() {
                 width={12}
                 height={12}
               />
-              <span className="ml-2 font-medium">{prayer.name}</span>
+              <span className=" md:text-base text-sm  font-medium">
+                {prayer.name}
+              </span>
             </TableCell>
-            <TableCell className="my-2 rounded-sm drop-shadow bg-white w-36 px-4 py-2 mx-auto">
-              {prayer.adhan}
+            <TableCell className=" md:text-base text-nowrap text-sm rounded-sm drop-shadow bg-white w-36  mx-auto">
+              <p>{prayer.adhan}</p>
             </TableCell>
-            <TableCell className="my-2 rounded-sm drop-shadow bg-white w-36 px-4 py-2 mx-auto">
+            <TableCell className="md:text-base text-nowrap text-sm rounded-sm drop-shadow bg-white w-36  mx-auto">
               {prayer.iqhama}
             </TableCell>
           </TableRow>

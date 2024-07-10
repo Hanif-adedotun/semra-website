@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <Card className="w-[85%] bg-semraGreen min-h-96 mx-auto shadow-sm rounded-lg flex flex-col-reverse justify-between gap-2 sm:flex-row">
-      <CardContent className="flex flex-col justify-center gap-2 sm:gap-4">
-        <h1 className="text-[30px] sm:text-[60px] font-bold text-white">
+    <Card className="w-[85%] bg-semraGreen min-h-96 mx-auto shadow-sm rounded-lg flex flex-col-reverse justify-between gap-2 md:flex-row">
+      <CardContent className="flex flex-col justify-center gap-2 md:gap-4">
+        <h1 className="text-[30px] md:text-[60px] font-bold text-white">
           Assalamu Alaykum Wa Rahmattullahi Wa Baraka'atuh
         </h1>
         <Link href={"/about"}>
@@ -16,7 +16,7 @@ export default function Header() {
           </Button>
         </Link>
       </CardContent>
-      <CardContent className="w-full sm:w-2/3 h-[250px] sm:h-[500px]  sm:mr-[50px] relative">
+      <CardContent className="w-full md:w-2/3 h-[250px] md:h-[500px]  md:mr-[50px] relative">
         <Image
           src="/icons/praying.svg"
           className="object-contain rounded-lg "

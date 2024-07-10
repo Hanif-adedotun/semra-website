@@ -56,8 +56,8 @@ export default function Donation() {
     console.log(values);
   }
   return (
-    <Card className="mt-[80px] w-[85%] p-1 sm:p-20 bg-fadedGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-0 justify-items-start">
-      <CardContent className="flex flex-col text-white justify-start pt-8 gap-2 sm:gap-4">
+    <Card className="mt-[80px] w-[85%] p-1 md:p-20 bg-fadedGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 justify-items-start">
+      <CardContent className="flex flex-col text-white justify-start pt-8 gap-2 md:gap-4">
         <div className="w-full h-[300px] relative rounded-sm">
           <Image
             src="/pictures/donation.jpg"
@@ -85,11 +85,11 @@ export default function Donation() {
             <ToggleGroup
               size={null}
               type="single"
-              className="gap-4 justify-start flex-wrap sm:flex-nowrap"
+              className="gap-4 justify-start flex-wrap lg:flex-nowrap"
             >
               {defaultPrices.map((price, index) => (
                 <ToggleGroupItem
-                  className="text-sm sm:text-base data-[state=on]:bg-semraYellow/80 bg-semraYellow/10 hover:bg-semraYellow/30 text-semraYellow data-[state=on]:text-white hover:text-semraYellow"
+                  className="text-sm md:text-base data-[state=on]:bg-semraYellow/80 bg-semraYellow/10 hover:bg-semraYellow/30 text-semraYellow data-[state=on]:text-white hover:text-semraYellow"
                   key={index}
                   value={price.value.toString()}
                 >
@@ -183,57 +183,55 @@ export default function Donation() {
                   </FormItem>
                 )}
               />
-
-              {/* Message */}
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem className="block">
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Do you have any extra information to share?"
-                        className="placeholder:opacity-10 rounded-[10px] resize-none outline:none border-0 bg-black/5"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              {/* Terms */}
-              <div>
-                <FormField
-                  control={form.control}
-                  name="terms"
-                  render={({ field }) => (
-                    <FormItem className="block flex flex-row items-start space-x-3 space-y-0 rounded-md w-full p-2 my-8">
-                      <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                        />
-                      </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel>
-                          You agree to receive monthly reminders for your
-                          pledged payment
-                        </FormLabel>
-                      </div>
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="bg-semraYellow rounded-[10px] mx-auto text-white w-64 h-12"
-              >
-                Submit
-              </Button>
             </div>
+
+            {/* Message */}
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem className="block">
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Do you have any extra information to share?"
+                      className="placeholder:opacity-10 rounded-[10px] resize-none outline:none border-0 bg-black/5"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            {/* Terms */}
+            <FormField
+              control={form.control}
+              name="terms"
+              render={({ field }) => (
+                <FormItem className="block flex flex-row items-start space-x-3 space-y-0 rounded-md w-full p-2 my-8">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>
+                      You agree to receive monthly reminders for your pledged
+                      payment
+                    </FormLabel>
+                  </div>
+                </FormItem>
+              )}
+            />
+
+            <Button
+              type="submit"
+              className="bg-semraYellow rounded-[10px] mx-auto text-white w-full h-12"
+            >
+              Submit
+            </Button>
           </form>
         </Form>
       </CardContent>

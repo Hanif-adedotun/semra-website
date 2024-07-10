@@ -25,22 +25,22 @@ export default function Nav() {
   return (
     <>
       <div className="fixed inset-x-0 top-0 z-50 bg-black px-4 h-[40px] items-center w-screen flex justify-between px-[10%]">
-        <div className="flex justify-center gap-2 sm:gap-8">
-          <span className="text-[12px] text-white flex gap-1 items-center sm:gap-2">
+        <div className="flex justify-center gap-2 md:gap-8">
+          <span className="text-[12px] text-white flex gap-1 items-center md:gap-2">
             <Phone fill="white" color="black" size={"14px"} />{" "}
             <a className="" href="tel:+2349096381736">
               +234 909 628 1736
             </a>
           </span>
 
-          <span className="text-[12px] text-white flex gap-1 items-center sm:gap-2">
+          <span className="text-[12px] text-white flex gap-1 items-center md:gap-2">
             <Mail fill="white" color="black" size={"14px"} />{" "}
             <a className="" href="mailto:semra@gmail.com">
               semra@gmail.com
             </a>
           </span>
 
-          <span className="text-[12px] text-white flex gap-1 items-center sm:gap-2">
+          <span className="text-[12px] text-white flex gap-1 items-center md:gap-2">
             <MapPin fill="white" color="black" size={"14px"} />{" "}
             <a className="" href="mailto:semra@gmail.com">
               semra@gmail.com
@@ -48,7 +48,7 @@ export default function Nav() {
           </span>
         </div>
 
-        <div className="flex justify-center gap-1 sm:gap-2">
+        <div className="flex justify-center gap-1 md:gap-2">
           <span className="text-[12px] text-white">
             <Facebook fill="white" size={"16px"} />
           </span>
@@ -72,7 +72,7 @@ export default function Nav() {
 
           <div className="hidden md:flex gap-4">
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${
                     pathname == "/about" && "text-semraGreen"
@@ -109,7 +109,7 @@ export default function Nav() {
           </div>
 
           <div>
-            <Button className="bg-semraYellow rounded-md text-white hover:opacity-90">
+            <Button className="bg-semraYellow rounded-md text-sm text-white hover:opacity-90">
               Donate Now
             </Button>
           </div>

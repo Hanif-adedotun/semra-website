@@ -24,75 +24,73 @@ const Icon = ({ color }: { color: string }) => (
   </svg>
 );
 
-export default function Contact(){
-     return (
-       <div className="w-screen min-h-max flex items-center justify-center py-20">
-         <div>
-           <h2 className="font-semibold text-3xl text-center mb-20">
-             Contact Us
-           </h2>
-           <Card className="grid grid-row-3 sm:grid-cols-3 gap-4 sm:gap-48 border-0 shadow-none">
-             {/* Phone Number */}
-             <CardContent className="flex flex-col items-center">
-               <div className="relative">
-                 <Icon color="#E6F8EF" />
-                 <MailsIcon
-                   color="black"
-                   size={50}
-                   className="absolute left-[62.5px] top-[62.5px]"
-                 />
-               </div>
-               <Link
-                 href="mailto:hello@semra.com.ng"
-                 className="hover:text-semraGreen"
-               >
-                 hello@semra.com.ng
-               </Link>
-               <Link
-                 href="https://www.semra.com.ng"
-                 className="hover:text-semraGreen"
-               >
-                 www.semra.com.ng
-               </Link>
-             </CardContent>
+export default function Contact() {
+  return (
+    <div className="w-screen min-h-max flex items-center justify-center py-20">
+      <div>
+        <h2 className="font-semibold text-3xl text-center mb-20">Contact Us</h2>
+        <Card className="grid grid-row-3 md:grid-cols-3 gap-4 md:gap-48 border-0 shadow-none">
+          {/* Phone Number */}
+          <CardContent className="flex flex-col items-center">
+            <div className="relative">
+              <Icon color="#E6F8EF" />
+              <MailsIcon
+                color="black"
+                size={50}
+                className="absolute left-[62.5px] top-[62.5px]"
+              />
+            </div>
+            <Link
+              href="mailto:hello@semra.com.ng"
+              className="hover:text-semraGreen"
+            >
+              hello@semra.com.ng
+            </Link>
+            <Link
+              href="https://www.semra.com.ng"
+              className="hover:text-semraGreen"
+            >
+              www.semra.com.ng
+            </Link>
+          </CardContent>
 
-             {/* Address */}
-             <CardContent className="flex flex-col items-center text-center">
-               <div className="relative">
-                 <Icon color="#FF98224D" />
-                 <MapIcon
-                   color="black"
-                   size={50}
-                   className="absolute left-[62.5px] top-[62.5px]"
-                 />
-               </div>
-               <Link
-                 href="https://maps.app.goo.gl/wYpZTfN2cwf5JVkP6"
-                 className="hover:text-semraGreen"
-               >
-                 No. 2, Niger Crescent, off Main street, Suncity Estate, Abuja
-               </Link>
-             </CardContent>
+          {/* Address */}
+          <CardContent className="flex flex-col items-center text-center">
+            <div className="relative">
+              <Icon color="#FF98224D" />
+              <MapIcon
+                color="black"
+                size={50}
+                className="absolute left-[62.5px] top-[62.5px]"
+              />
+            </div>
+            <Link
+              href="https://maps.app.goo.gl/wYpZTfN2cwf5JVkP6"
+              className="hover:text-semraGreen"
+            >
+              No. 2, Niger Crescent, off Main street, Suncity Estate, Abuja
+            </Link>
+          </CardContent>
 
-             {/* Phone */}
-             <CardContent className="flex flex-col items-center">
-               <div className="relative">
-                 <Icon color="#0192474D" />
-                 <LucidePhoneCall
-                   color="black"
-                   size={50}
-                   className="absolute left-[62.5px] top-[62.5px]"
-                 />
-               </div>
-               <Link href="tel:09011111111" className="hover:text-semraGreen">
-                 +234 888 888 8888
-               </Link>
-               <Link href="tel:09011111111" className="hover:text-semraGreen">
-                 +234 888 888 8888
-               </Link>
-             </CardContent>
-           </Card>
-         </div>
-       </div>
-     );
+          {/* Phone */}
+          <CardContent className="flex flex-col items-center">
+            <div className="relative">
+              <Icon color="#0192474D" />
+              <LucidePhoneCall
+                color="black"
+                size={50}
+                className="absolute left-[62.5px] top-[62.5px]"
+              />
+            </div>
+            <Link href="tel:09011111111" className="hover:text-semraGreen">
+              +234 888 888 8888
+            </Link>
+            <Link href="tel:09011111111" className="hover:text-semraGreen">
+              +234 888 888 8888
+            </Link>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
 }

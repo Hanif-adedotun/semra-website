@@ -33,14 +33,14 @@ const images = [
 ];
 export default function Media() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false})
+    Autoplay({ delay: 2000, stopOnInteraction: false })
   );
 
   return (
     <Card className="bg-[#E6F8EF] min-h-96 w-[85%] mx-auto mt-[272px] relative flex justify-between">
       <Carousel
         plugins={[plugin.current]}
-        className="w-full sm:w-1/2 h-96 absolute left-0 sm:left-12 -top-48 rounded-md"
+        className="w-full md:w-1/2 h-96 absolute left-0 md:left-12 -top-48 rounded-md"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
         opts={{ loop: true }}
@@ -64,9 +64,9 @@ export default function Media() {
         {/* <CarouselPrevious />
         <CarouselNext /> */}
       </Carousel>
-      <div className="basis-0 sm:basis-2/3"></div>{" "}
+      <div className="basis-0 md:basis-2/3"></div>{" "}
       {/*//TODO: DO not remove this*/}
-      <CardContent className="flex flex-col justify-center gap-2 sm:gap-4 mt-[240px] sm:mt-0">
+      <CardContent className="flex flex-col justify-center gap-2 md:gap-4 mt-[240px] md:mt-0">
         <h3 className="font-semibold text-3xl">
           Meet our state of the art Islamic Center
         </h3>
@@ -86,10 +86,12 @@ export default function Media() {
   );
 }
 
-{/* <div className="p-1">
+{
+  /* <div className="p-1">
   <Card>
     <CardContent className="flex aspect-square items-center justify-center p-6">
       <span className="text-4xl font-semibold">{index + 1}</span>
     </CardContent>
   </Card>
-</div>;  */}
+</div>;  */
+}

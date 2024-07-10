@@ -3,18 +3,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import PrayerTable from "./prayers";
 
-
 export default function Timing() {
   return (
     <div
       className="bg-cover bg-repeat bg-left-top bg-[url('/bg-pattern-2.jpg')] py-20 my-12"
-      style={{ backgroundSize: "300px 300px;", backgroundRepeat: "repeat" }}
+      style={{ backgroundSize: "300px 300px", backgroundRepeat: "repeat" }}
     >
       <div className="flex items-center justify-between ml-[10%] bg-transparent">
         <h1 className="text-3xl font-bold text-primary">Prayer Times</h1>
       </div>
-      <Card className="mt-4 w-[85%] min-h-96 px-12 py-20 mx-auto shadow-sm rounded-lg grid grid-cols-1 gap-4 sm:gap-0 sm:grid-cols-2 bg-white shadow-sm">
-        <CardContent className="flex flex-col justify-start gap-6 sm:gap-12">
+      <Card className="mt-4 w-[85%] min-h-96 px-12 py-20 mx-auto shadow-sm rounded-lg grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-2 bg-white shadow-sm">
+        <CardContent className="flex flex-col justify-start gap-6 md:gap-12">
           <h1 className="text-2xl font-bold text-primary">Welcome to SEMRA</h1>
           <p>
             Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
@@ -33,7 +32,7 @@ export default function Timing() {
           </Link>
         </CardContent>
 
-        <CardContent className="flex flex-col justify-center gap-2 sm:gap-4">
+        <CardContent className="flex flex-col justify-center gap-2 md:gap-4">
           <h1 className="text-2xl font-bold text-primary">Prayer Times</h1>
           <PrayerTable />
         </CardContent>
