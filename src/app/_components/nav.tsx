@@ -19,12 +19,13 @@ import { usePathname } from "next/navigation";
 
 // Icons
 import { siFacebook } from 'simple-icons';
+import { MobileNav } from "./mobileNav";
 
 export default function Nav() {
   const pathname = usePathname();
   return (
     <>
-      <div className="fixed inset-x-0 top-0 z-50 bg-black px-4 h-[40px] items-center w-screen flex justify-between px-[10%]">
+      <div className=" hidden md:flex fixed inset-x-0 top-0 z-50 bg-black px-4 h-[40px] items-center w-screen  justify-between px-[10%]">
         <div className="flex justify-center gap-2 md:gap-8">
           <span className="text-[12px] text-white flex gap-1 items-center md:gap-2">
             <Phone fill="white" color="black" size={"14px"} />{" "}
@@ -60,7 +61,7 @@ export default function Nav() {
           </span>
         </div>
       </div>
-      <NavigationMenu className="fixed inset-x-0 top-[40px] z-50 bg-white w-screen">
+      <NavigationMenu className="fixed inset-x-0 top-0 md:top-[40px] z-50 bg-white w-screen">
         <NavigationMenuList className="flex justify-between h-14 p-4 items-center w-screen">
           <Link href="/" className="flex items-center" prefetch={false}>
             <div className="flex gap-4 justify-start items-center">
@@ -108,6 +109,10 @@ export default function Nav() {
             </NavigationMenuItem>
           </div>
 
+          <div className="flex md:hidden gap-4">
+            <MobileNav/>
+          </div>
+
           <div>
             <Button className="bg-semraYellow rounded-md text-sm text-white hover:opacity-90">
               Donate Now
@@ -118,3 +123,5 @@ export default function Nav() {
     </>
   );
 }
+
+

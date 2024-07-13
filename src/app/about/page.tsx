@@ -3,12 +3,11 @@ import { LucidePhoneCall, MailsIcon, MapIcon } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
+import { TimelineComponent } from "./timeline";
 
 export const metadata: Metadata = {
   title: "About us",
 };
-
-
 
 export default function AboutUs() {
   return (
@@ -29,7 +28,16 @@ export default function AboutUs() {
       </p>
 
       <div className="w-[100%] h-96 md:h-[500px] relative">
-        <Image className="object-cover rounded-md md:rounded-lg" fill src="/pictures/mosque2.jpeg" alt="Suncity Mosque" />
+        <Image
+          className="object-cover rounded-md md:rounded-lg"
+          fill
+          src="/pictures/mosque2.jpeg"
+          alt="Suncity Mosque"
+        />
+      </div>
+
+      <div className="mx-4 text-wrap">
+        <TimelineComponent />
       </div>
     </div>
   );
