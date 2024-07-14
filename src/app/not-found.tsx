@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <div className="w-screen min-h-max flex flex-col items-center justify-center gap-20 py-36 overflow-x-none">
-      <h2 className="font-semibold text-[100px] text-center text-black">
+      <h2 className="font-semibold text-[50px] md:text-[100px] text-center text-black">
         404: Page not found
       </h2>
       <Link href="/">

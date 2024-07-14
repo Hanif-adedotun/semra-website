@@ -24,8 +24,8 @@ export function MobileNav() {
         Menu
       </NavigationMenuTrigger>
 
-      <NavigationMenuContent className="bg-white">
-        <ul className="grid grid-cols-2 w-[400px] gap-3 p-4 ">
+      <NavigationMenuContent className="bg-white left-[200px]">
+        <ul className="grid grid-cols-2 w-[400px] gap-3 p-4">
           <ListItem key={"Home"} title={"Home"} href={"/"}>
             {""}
           </ListItem>

@@ -19,6 +19,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Copy } from "lucide-react";
+import { toast } from "sonner";
 
 const defaultPrices = [
   { name: "N2,000", value: 2000 },
@@ -55,6 +57,12 @@ export default function Donation() {
     // ✅ This will be type-safe and validated.
     console.log(values);
   }
+
+  const onCopy = (text:any) =>{
+    navigator.clipboard.writeText(text);
+    toast.success("Copied to clipboard");
+
+  }
   return (
     <Card className="mt-[80px] w-[85%] p-1 md:p-20 bg-fadedGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 justify-items-start">
       <CardContent className="flex flex-col text-white justify-start pt-8 gap-2 md:gap-4">
@@ -67,12 +75,40 @@ export default function Donation() {
           />
         </div>
         <p className="text-base text-black mt-8">
-          Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
+          {/* Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
           sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
           commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur{" "}
+          velit esse cillum dolore eu fugiat nulla pariatur{" "} */}
+          <section className="border border-dashed border-1 border-semraYellow w-full p-4 rounded-md flex flex-col gap-2">
+            <div className="text-center ">TAJ Bank</div>
+            <div className="text-center">
+              SUNCITY ESTATE MUSLIM RESIDENTS ASSOCIATION
+            </div>
+            <div className="flex gap-2 items-center justify-center">
+              Account Number:{" "}
+              <span className="text-semraYellow">0002923259</span>
+              <Copy
+                size={14}
+                color="#FD9822"
+                onClick={() => onCopy("0002923259")}
+                className="cursor-pointer hover:scale-125 transition duration-300 ease-in-out"
+              />
+            </div>
+          </section>
+
+          <section className="border border-dashed border-1 mt-4 border-semraYellow w-full p-4 rounded-md flex flex-col gap-2">
+            <div className="flex gap-2 items-center justify-center ">
+              Meter No: <span className="text-semraYellow">45976978273</span>{" "}
+              <Copy
+                size={14}
+                color="#FD9822"
+                onClick={() => onCopy("45976978273")}
+                className="cursor-pointer hover:scale-125 transition duration-300 ease-in-out"
+              />
+            </div>
+          </section>
         </p>
       </CardContent>
 

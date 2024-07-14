@@ -7,11 +7,11 @@ export default function Header() {
   return (
     <Card className="w-[85%] bg-semraGreen min-h-96 mx-auto shadow-sm rounded-lg flex flex-col-reverse justify-between gap-2 md:flex-row">
       <CardContent className="flex flex-col justify-center gap-2 md:gap-4">
-        <h1 className="text-[30px] md:text-[60px] font-bold text-white">
+        <h1 className="text-[30px] md:text-[60px] text-center md:text-left font-bold text-white">
           Assalamu Alaykum Wa Rahmattullahi Wa Baraka'atuh
         </h1>
         <Link href={"/about"}>
-          <Button className="bg-semraYellow rounded-md text-white mt-8 text-base py-4 px-8">
+          <Button className="bg-semraYellow rounded-md text-white w-full md:w-1/2 mt-8 text-base py-6 px-8">
             Join our Community
           </Button>
         </Link>

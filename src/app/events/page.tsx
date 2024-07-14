@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Events() {
   return (
     <>
-      <h2 className="font-semibold text-3xl text-center mb-20 pt-20">
+      <h2 className="font-semibold text-3xl text-center mb-20 px-12 md:px-0 pt-20">
         Latest events from the community
       </h2>
       <section className="w-screen md:overflow-hidden h-max md:h-screen px-[7.5%] grid grid cols-1 md:grid-cols-2 gap-12">
@@ -35,13 +35,14 @@ export default function Events() {
         <div className="md:overflow-auto flex flex-col gap-12">
           {events.map((event) => (
             <Card className="flex flex-col md:flex-row gap-4 border-0 shadow-none">
-              <Image
-                src={event.image}
-                alt={event.title}
-                width={200}
-                height={150}
-                className="object-cover rounded-md"
-              />
+              <div className="w-4/6 md:w-[200px] h-[200px] md:h-[150px] relative">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="object-cover rounded-md"
+                />
+              </div>
               <div className="flex flex-col gap-2">
                 <p className="text-semraGreen">{event.publishedAt}</p>
                 <h3 className="text-base font-semibold">{event.title}</h3>
