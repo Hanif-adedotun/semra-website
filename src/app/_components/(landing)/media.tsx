@@ -68,7 +68,7 @@ export default function Media() {
       {/*//TODO: DO not remove this*/}
       <CardContent className="flex flex-col justify-center gap-2 md:gap-4 mt-[240px] md:mt-0">
         <h3 className="font-semibold text-3xl">
-          Meet our state of the art Islamic Center
+          Our state of the art Islamic Center
         </h3>
         <ul className="text-base">
           <li className="flex gap-2 my-4 items-center font-medium">

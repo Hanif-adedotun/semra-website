@@ -11,7 +11,7 @@ export default function Header() {
           Assalamu Alaykum Wa Rahmattullahi Wa Baraka'atuh
         </h1>
         <Link href={"/about"}>
-          <Button className="bg-semraYellow rounded-md text-white w-full md:w-1/2 mt-8 text-base py-6 px-8">
+          <Button className="bg-semraYellow rounded-md text-white w-full md:w-1/2 mt-8 text-base py-6 px-8 hover:bg-semraYellow/90">
             Join our Community
           </Button>
         </Link>

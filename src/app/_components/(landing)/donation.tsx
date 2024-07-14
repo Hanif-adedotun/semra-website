@@ -34,7 +34,7 @@ const formSchema = z.object({
   amount: z.number().int(),
   fullName: z.string().min(2).max(50),
   email: z.string().email(),
-  phoneNumber: z.number().min(10).max(15),
+  phoneNumber: z.string().min(10).max(15),
   message: z.string().max(250),
   terms: z.boolean(),
 });
@@ -46,7 +46,7 @@ export default function Donation() {
       amount: 0,
       fullName: "",
       email: "",
-      phoneNumber: 0,
+      phoneNumber: "",
       message: "",
       terms: false,
     },
@@ -75,12 +75,6 @@ export default function Donation() {
           />
         </div>
         <p className="text-base text-black mt-8">
-          {/* Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur{" "} */}
           <section className="border border-dashed border-1 border-semraYellow w-full p-4 rounded-md flex flex-col gap-2">
             <div className="text-center ">TAJ Bank</div>
             <div className="text-center">
@@ -113,7 +107,7 @@ export default function Donation() {
       </CardContent>
 
       <CardContent className="text-start w-full">
-        <h1 className="text-2xl font-bold text-black">
+        <h1 className="text-3xl font-semibold text-black">
           Pledge Montly Donation
         </h1>
         <Form {...form}>
@@ -128,6 +122,7 @@ export default function Donation() {
                   className="text-sm md:text-base data-[state=on]:bg-semraYellow/80 bg-semraYellow/10 hover:bg-semraYellow/30 text-semraYellow data-[state=on]:text-white hover:text-semraYellow"
                   key={index}
                   value={price.value.toString()}
+                  onChange={(value) => form.setValue("amount", 43)}
                 >
                   {price.name}
                 </ToggleGroupItem>

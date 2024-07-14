@@ -110,11 +110,11 @@ export default function Nav() {
           </div>
 
           <div className="flex md:hidden gap-4">
-            <MobileNav/>
+            <MobileNav />
           </div>
 
           <div>
-            <Button className="bg-semraYellow rounded-md text-sm text-white hover:opacity-90">
+            <Button className="bg-semraYellow rounded-md text-sm text-white hover:bg-semraYellow/80">
               Donate Now
             </Button>
           </div>
