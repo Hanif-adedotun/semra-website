@@ -33,8 +33,8 @@ export default function Events() {
           </Card>
         </div>
         <div className="md:overflow-auto flex flex-col gap-12">
-          {events.map((event) => (
-            <Card className="flex flex-col md:flex-row gap-4 border-0 shadow-none">
+          {events.map((event,i) => (
+            <Card key={i} className="flex flex-col md:flex-row gap-4 border-0 shadow-none">
               <div className="w-4/6 md:w-[200px] h-[200px] md:h-[150px] relative">
                 <Image
                   src={event.image}
