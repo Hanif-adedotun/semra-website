@@ -74,7 +74,7 @@ export default function Donation() {
             alt=""
           />
         </div>
-        <p className="text-base text-black mt-8">
+        <div className="text-base text-black mt-8">
           <section className="border border-dashed border-1 border-semraYellow w-full p-4 rounded-md flex flex-col gap-2">
             <div className="text-center ">TAJ Bank</div>
             <div className="text-center">
@@ -103,7 +103,7 @@ export default function Donation() {
               />
             </div>
           </section>
-        </p>
+        </div>
       </CardContent>
 
       <CardContent className="text-start w-full">

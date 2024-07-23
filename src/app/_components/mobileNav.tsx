@@ -11,21 +11,22 @@ import {
 } from "@/components/ui/navigation-menu";
 import React from "react";
 import { cn } from "@/lib/utils";
-import { AlignJustify } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
+import { AlignJustify } from "lucide-react";
 
 export function MobileNav() {
   return (
-    <NavigationMenuItem className="mx-auto">
+    <NavigationMenuItem className="border-2 border-red-800">
       <NavigationMenuTrigger>
-        {/* <div className="flex gap-2 items-center">
-          <AlignJustify size={12} /> 
-        </div> */}
-        Menu
+        <div className="flex gap-2 items-center">
+          <AlignJustify size={28} />
+        </div>
+        {/* Menu */}
       </NavigationMenuTrigger>
 
-      <NavigationMenuContent className="bg-white left-[200px]">
-        <ul className="grid grid-cols-2 w-[400px] gap-3 p-4">
+      <NavigationMenuContent className="bg-white border-2 border-red-800">
+        <ul className="grid grid-cols-1 w-full gap-3 p-4">
           <ListItem key={"Home"} title={"Home"} href={"/"}>
             {""}
           </ListItem>
@@ -40,6 +41,12 @@ export function MobileNav() {
 
           <ListItem key={"contact"} title={"Contact us"} href={"/contact"}>
             {""}
+          </ListItem>
+
+          <ListItem key={"contact"}>
+            <Button className="bg-semraYellow w-full rounded-md text-sm text-white hover:bg-semraYellow/80">
+              Donate Now
+            </Button>
           </ListItem>
         </ul>
       </NavigationMenuContent>

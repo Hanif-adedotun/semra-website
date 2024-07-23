@@ -15,7 +15,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Facebook, Instagram, Locate, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 // Icons
 import { siFacebook } from 'simple-icons';
@@ -23,11 +23,21 @@ import { MobileNav } from "./mobileNav";
 
 export default function Nav() {
   const pathname = usePathname();
+  const router = useRouter();
   return (
     <>
       <div className=" hidden md:flex fixed inset-x-0 top-0 z-50 bg-black px-4 h-[40px] items-center w-screen  justify-between px-[10%]">
+        <div className="flex justify-center items-end gap-2 md:gap-6">
+          <Image
+            src="/icons/palestine.avif"
+            width={30}
+            height={30}
+            alt="Palastine flag"
+          />
+          <p className="text-[12px] text-white">May Allah protect Palestine</p>
+        </div>
         <div className="flex justify-center gap-2 md:gap-8">
-          <span className="text-[12px] text-white flex gap-1 items-center md:gap-2">
+          <span className="text-[12px] text-white flex gap-1 items-center md:gap-4">
             <Phone fill="white" color="black" size={"14px"} />{" "}
             <a className="" href="tel:+2349096381736">
               +234 909 628 1736
@@ -113,8 +123,8 @@ export default function Nav() {
             <MobileNav />
           </div>
 
-          <div>
-            <Button className="bg-semraYellow rounded-md text-sm text-white hover:bg-semraYellow/80">
+          <div className="hidden md:flex">
+            <Button onClick={() => router.push('/#donate')} className="bg-semraYellow rounded-md text-sm text-white hover:bg-semraYellow/80">
               Donate Now
             </Button>
           </div>

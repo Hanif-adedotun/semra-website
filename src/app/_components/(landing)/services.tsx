@@ -47,11 +47,11 @@ export default function Services() {
         </Link>
       </CardContent>
 
-      <CardContent className="grid grid-cols-2 grid-row-2">
+      <CardContent className="grid md:grid-cols-2 md:grid-row-2 ">
         {services.map((service, index) => (
           <div
             key={index}
-            className={`hover:bg-white text-white hover:text-black rounded-md gap-2 p-8 cursor-pointer`}
+            className={`hover:bg-white text-white hover:text-black rounded-md gap-2 p-6 md:p-8 cursor-pointer`}
           >
             <Image
               src={service.logo}

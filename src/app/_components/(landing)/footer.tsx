@@ -19,10 +19,20 @@ export function Footer() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
 
+        <div className="flex justify-start items-center gap-2 md:gap-4 my-2">
+          <Image
+            src="/icons/palestine.avif"
+            width={30}
+            height={30}
+            alt="Palastine flag"
+          />
+          <p className="text-white">May Allah protect Palestine</p>
+        </div>
+
         <div className="flex gap-4">
-          <Facebook size={28} color="#FD9822" />
-          <Instagram size={28} color="#FD9822" />
-          <Youtube size={28} color="#FD9822" />
+          <Facebook size={20} color="#FD9822" />
+          <Instagram size={20} color="#FD9822" />
+          <Youtube size={20} color="#FD9822" />
         </div>
       </div>
       {/* Section 2 */}
