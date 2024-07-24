@@ -21,9 +21,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <Nav />
-      <Toaster richColors />
       <body className={`${raleway.className} mt-[80px] bg-white`}>
+        <Nav />
+        <Toaster richColors />
         {children}
       </body>
       <Footer />

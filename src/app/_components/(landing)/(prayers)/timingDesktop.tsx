@@ -7,46 +7,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { prayers, renderTime } from "@/utils/prayerTypes";
 import Image from "next/image";
 
-const prayers = [
-  {
-    logo: "/icons/fajr.svg",
-    name: "jumah",
-    adhan: "05:30 AM",
-    iqhama: "05:30 AM",
-  },
-  {
-    logo: "/icons/fajr.svg",
-    name: "fajr",
-    adhan: "05:30 AM",
-    iqhama: "05:30 AM",
-  },
-  {
-    logo: "/icons/dhur.svg",
-    name: "dhuhur",
-    adhan: "05:30 AM",
-    iqhama: "05:30 AM",
-  },
-  {
-    logo: "/icons/asr.svg",
-    name: "asr",
-    adhan: "05:30 AM",
-    iqhama: "05:30 AM",
-  },
-  {
-    logo: "/icons/maghrib.svg",
-    name: "maghrib",
-    adhan: "05:30 AM",
-    iqhama: "05:30 AM",
-  },
-  {
-    logo: "/icons/isha.svg",
-    name: "isha",
-    adhan: "05:30 AM",
-    iqhama: "05:30 AM",
-  },
-];
+
 export default function PrayerTable() {
   return (
     <Table>
@@ -78,15 +42,15 @@ export default function PrayerTable() {
                 width={12}
                 height={12}
               />
-              <span className=" md:text-base text-sm  font-medium">
+              <span className=" md:text-base text-sm text-left font-medium">
                 {prayer.name}
               </span>
             </TableCell>
-            <TableCell className=" md:text-base text-nowrap text-sm rounded-sm drop-shadow bg-white w-36  mx-auto">
-              <p>{prayer.adhan}</p>
+            <TableCell className="text-nowrap text-sm rounded-sm drop-shadow bg-white w-max text-center mx-auto">
+              <p>{renderTime(prayer.adhan, prayer.meridian)}</p>
             </TableCell>
-            <TableCell className="md:text-base text-nowrap text-sm rounded-sm drop-shadow bg-white w-36  mx-auto">
-              {prayer.iqhama}
+            <TableCell className="text-nowrap text-sm rounded-sm drop-shadow bg-white w-max text-center  mx-auto">
+              {renderTime(prayer.iqhama, prayer.meridian)}
             </TableCell>
           </TableRow>
         ))}
