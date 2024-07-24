@@ -3,13 +3,37 @@ import { LucidePhoneCall, MailsIcon, MapIcon } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import { TimelineComponent } from "./timeline";
+import Timeline from "./timeline";
 
 export const metadata: Metadata = {
   title: "About us",
 };
 
 export default function AboutUs() {
+  const timelineItems = [
+    {
+      year: "2019 - 2020",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      year: "2021 - 2023",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      year: "2021 - 2023",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      year: "2021 - 2023",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+
+    {
+      year: "2021 - 2023",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    // Add more items as needed
+  ];
   return (
     <div className="w-screen min-h-max flex flex-col items-center justify-center gap-20 py-12 px-[7.5%] md:px-[15%]">
       <h2 className="font-semibold text-3xl text-center text-black mt-12">
@@ -37,7 +61,7 @@ export default function AboutUs() {
       </div>
 
       <div className="mx-4 text-wrap">
-        <TimelineComponent />
+        <Timeline items={timelineItems} />
       </div>
     </div>
   );
