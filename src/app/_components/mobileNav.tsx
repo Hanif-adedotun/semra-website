@@ -17,7 +17,7 @@ import { AlignJustify } from "lucide-react";
 
 export function MobileNav() {
   return (
-    <NavigationMenuItem className="border-2 border-red-800">
+    <NavigationMenuItem className="">
       <NavigationMenuTrigger>
         <div className="flex gap-2 items-center">
           <AlignJustify size={28} />
@@ -25,8 +25,8 @@ export function MobileNav() {
         {/* Menu */}
       </NavigationMenuTrigger>
 
-      <NavigationMenuContent className="bg-white border-2 border-red-800">
-        <ul className="grid grid-cols-1 w-full gap-3 p-4">
+      <NavigationMenuContent className="bg-white relative w-screen">
+        <ul className="grid grid-cols-1 gap-3 p-4">
           <ListItem key={"Home"} title={"Home"} href={"/"}>
             {""}
           </ListItem>
