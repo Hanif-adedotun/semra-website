@@ -27,9 +27,9 @@ import Image from "next/image";
 import { CircleCheckBig } from "lucide-react";
 
 const images = [
-  "/pictures/mosque1.jpeg",
-  "/pictures/mosque2.jpeg",
-  "/pictures/mosque3.jpeg",
+  "https://uxat7lu2fpipwkob.public.blob.vercel-storage.com/mosque-media/mosque1-VYlPeQhdZNiJ2VudEJhddOGVVjoIe5.jpeg",
+  "https://uxat7lu2fpipwkob.public.blob.vercel-storage.com/mosque-media/mosque2-xOKKbrhZcK4NGB7nti2QvVqD8VoEZ1.jpeg",
+  "https://uxat7lu2fpipwkob.public.blob.vercel-storage.com/mosque-media/mosque3-JEvnMnEyNh9orzyxcOAzgIEeIZLVOv.jpeg",
 ];
 export default function Media() {
   const plugin = React.useRef(
