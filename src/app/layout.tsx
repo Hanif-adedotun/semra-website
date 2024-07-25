@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "./_components/nav";
 import { Footer } from "./_components/(landing)/footer";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 // const poppins = Poppins({ weight:"300" ,subsets: ["latin"] });
 const raleway = Raleway({ subsets: ["latin"] });
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Nav />
         <Toaster richColors />
         {children}
+        <Analytics />
       </body>
       <Footer />
     </html>

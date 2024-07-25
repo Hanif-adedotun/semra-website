@@ -55,7 +55,7 @@ export default function AboutUs() {
         <Image
           className="object-cover rounded-md md:rounded-lg"
           fill
-          src="/pictures/mosque2.jpeg"
+          src="https://uxat7lu2fpipwkob.public.blob.vercel-storage.com/mosque-media/mosque2-xOKKbrhZcK4NGB7nti2QvVqD8VoEZ1.jpeg"
           alt="Suncity Mosque"
         />
       </div>
