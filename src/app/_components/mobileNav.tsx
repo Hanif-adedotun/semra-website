@@ -11,11 +11,13 @@ import {
 } from "@/components/ui/navigation-menu";
 import React from "react";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { AlignJustify } from "lucide-react";
 
 export function MobileNav() {
+  const router = useRouter();
   return (
     <NavigationMenuItem className="">
       <NavigationMenuTrigger>
@@ -44,7 +46,10 @@ export function MobileNav() {
           </ListItem>
 
           <ListItem key={"contact"}>
-            <Button className="bg-semraYellow w-full rounded-md text-sm text-white hover:bg-semraYellow/80">
+            <Button
+              onClick={() => router.push("/#donate")}
+              className="bg-semraYellow w-full rounded-md text-sm text-white hover:bg-semraYellow/80"
+            >
               Donate Now
             </Button>
           </ListItem>

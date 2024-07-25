@@ -1,17 +1,3 @@
-// import { Card, CardContent } from "@/components/ui/card";
-// import Video from "next-video";
-// import mosqueDemo from "../../../../videos/mosqueVideo.mp4";
-
-// export default function Media(){
-//      return (
-//        <Card className="bg-[#E6F8EF] min-h-96 w-[85%] mx-auto mt-48 relative">
-//          <CardContent className="w-[50%] h-[50%] absolute -top-24 rounded-md">
-//            <Video className="w-full " src={mosqueDemo} autoPlay loop />
-//          </CardContent>
-//        </Card>
-//      );
-// }
-
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 

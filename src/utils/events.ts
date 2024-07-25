@@ -1,6 +1,6 @@
 export const events = [
   {
-    id: "eid-il-adha-2022",
+    id: "eid-il-adha-2024",
     title: "Eid ul Adha Celebrations 2024",
     image: "/pictures/eidadha2024.jpeg",
     description: `Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
@@ -13,7 +13,7 @@ export const events = [
     slideshow: [],
   },
   {
-    id: "eid-il-adha-2022",
+    id: "eid-il-adha-2024",
     title: "Eid ul Adha Celebrations 2024",
     image: "/pictures/eidadha2024.jpeg",
     description: `Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
@@ -26,7 +26,7 @@ export const events = [
     slideshow: [],
   },
   {
-    id: "eid-il-adha-2022",
+    id: "eid-il-adha-2024",
     title: "Eid ul Adha Celebrations 2024",
     image: "/pictures/eidadha2024.jpeg",
     description: `Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
@@ -39,7 +39,7 @@ export const events = [
     slideshow: [],
   },
   {
-    id: "eid-il-adha-2022",
+    id: "eid-il-adha-2024",
     title: "Eid ul Adha Celebrations 2024",
     image: "/pictures/eidadha2024.jpeg",
     description: `Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
@@ -52,7 +52,7 @@ export const events = [
     slideshow: [],
   },
   {
-    id: "eid-il-adha-2022",
+    id: "eid-il-adha-2024",
     title: "Eid ul Adha Celebrations 2024",
     image: "/pictures/eidadha2024.jpeg",
     description: `Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
@@ -65,7 +65,7 @@ export const events = [
     slideshow: [],
   },
   {
-    id: "eid-il-adha-2022",
+    id: "eid-il-adha-2024",
     title: "Eid ul Adha Celebrations 2024",
     image: "/pictures/eidadha2024.jpeg",
     description: `Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
@@ -78,7 +78,7 @@ export const events = [
     slideshow: [],
   },
   {
-    id: "eid-il-adha-2022",
+    id: "eid-il-adha-2024",
     title: "Eid ul Adha Celebrations 2024",
     image: "/pictures/eidadha2024.jpeg",
     description: `Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor

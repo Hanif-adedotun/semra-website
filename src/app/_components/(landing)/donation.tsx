@@ -64,7 +64,7 @@ export default function Donation() {
 
   }
   return (
-    <Card className="mt-[80px] w-[85%] p-1 md:p-20 bg-fadedGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 justify-items-start">
+    <Card id="donate" className="mt-[80px] w-[85%] p-1 md:p-20 bg-fadedGreen min-h-96 mx-auto shadow-sm rounded-lg grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 justify-items-start">
       <CardContent className="flex flex-col text-white justify-start pt-8 gap-2 md:gap-4">
         <div className="w-full h-[300px] relative rounded-sm">
           <Image

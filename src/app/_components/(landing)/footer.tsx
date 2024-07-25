@@ -41,14 +41,14 @@ export function Footer() {
         <Link href={"/about"}>
           <p className="text-white">About Us</p>
         </Link>
-        <Link href={"/donate"}>
+        <Link href={"/#donate"}>
           <p className="text-white">Donate</p>
         </Link>
-        <Link href={"/contact"}>
+        <Link href={"/events"}>
           <p className="text-white">Events</p>
         </Link>
-        <Link href={"/gallery"}>
-          <p className="text-white">Gallery / Pictures</p>
+        <Link href={"/contact"}>
+          <p className="text-white">Contact</p>
         </Link>
       </div>
 
@@ -56,7 +56,7 @@ export function Footer() {
       <div>
         <h1 className="text-white text-xl font-bold pb-4">Contact Us</h1>
         <p className="text-white">Email: semra@gmail.com</p>
-        <p className="text-white">Phone: +234 909 628 1736</p>
+        <p className="text-white">Phone: +234 000 000 0000</p>
         <p className="text-white">
           Address: Main street, Suncity Estate, Abuja
         </p>
