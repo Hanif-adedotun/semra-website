@@ -11,8 +11,8 @@ export const prayers = [
   {
     logo: "/icons/fajr.svg",
     name: "fajr",
-    adhan: "05:00",
-    iqhama: "05:20",
+    adhan: "05:12",
+    iqhama: "05:25",
     meridian: "am",
   },
   {
@@ -25,21 +25,21 @@ export const prayers = [
   {
     logo: "/icons/asr.svg",
     name: "asr",
-    adhan: "16:04",
-    iqhama: "16:10",
+    adhan: "15:50",
+    iqhama: "16:00",
     meridian: "pm",
   },
   {
     logo: "/icons/maghrib.svg",
     name: "maghrib",
-    adhan: "18:56",
-    iqhama: "19:00",
+    adhan: "18:49",
+    iqhama: "18:57",
     meridian: "pm",
   },
   {
     logo: "/icons/isha.svg",
     name: "isha",
-    adhan: "20:04",
+    adhan: "20:00",
     iqhama: "20:10",
     meridian: "pm",
   },
