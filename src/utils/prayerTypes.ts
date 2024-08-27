@@ -32,15 +32,15 @@ export const prayers = [
   {
     logo: "/icons/maghrib.svg",
     name: "maghrib",
-    adhan: "18:49",
-    iqhama: "18:57",
+    adhan: "18:46",
+    iqhama: "18:55",
     meridian: "pm",
   },
   {
     logo: "/icons/isha.svg",
     name: "isha",
     adhan: "20:00",
-    iqhama: "20:10",
+    iqhama: "20:05",
     meridian: "pm",
   },
 ];
