@@ -25,22 +25,22 @@ export const prayers = [
   {
     logo: "/icons/asr.svg",
     name: "asr",
-    adhan: "15:50",
-    iqhama: "16:00",
+    adhan: "15:40",
+    iqhama: "15:50",
     meridian: "pm",
   },
   {
     logo: "/icons/maghrib.svg",
     name: "maghrib",
-    adhan: "18:46",
-    iqhama: "18:55",
+    adhan: "18:23",
+    iqhama: "18:30",
     meridian: "pm",
   },
   {
     logo: "/icons/isha.svg",
     name: "isha",
-    adhan: "20:00",
-    iqhama: "20:05",
+    adhan: "19:30",
+    iqhama: "19:40",
     meridian: "pm",
   },
 ];
