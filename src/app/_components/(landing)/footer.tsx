@@ -50,10 +50,12 @@ export function Footer() {
       {/* Section 3 */}
       <div>
         <h1 className="text-white text-base  font-bold pb-4">Contact Us</h1>
-        <p className="text-white">Email: semra@gmail.com</p>
-        <p className="text-white">Phone: +234 000 000 0000</p>
+        <p className="text-white">Email: semra.suncity@gmail.com</p>
         <p className="text-white">
-          Address: Main street, Suncity Estate, Abuja
+          Phone: <a href="tel:+2348078785032">+234-807-878-5032</a>
+        </p>
+        <p className="text-white">
+          Address: No. 2, Niger Crescent, off Main street, Suncity Estate, Abuja
         </p>
       </div>
 

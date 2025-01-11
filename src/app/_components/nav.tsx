@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -12,13 +12,21 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
-import { Facebook, Instagram, Locate, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Locate,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 // Icons
-import { siFacebook } from 'simple-icons';
+import { siFacebook } from "simple-icons";
 import { MobileNav } from "./mobileNav";
 
 export default function Nav() {
@@ -39,22 +47,20 @@ export default function Nav() {
         <div className="flex justify-center gap-2 md:gap-8">
           <span className="text-[12px] text-white flex gap-1 items-center md:gap-4">
             <Phone fill="white" color="black" size={"14px"} />{" "}
-            <a className="" href="tel:+2349096381736">
-              +234 909 628 1736
-            </a>
+            <a href="tel:+2348078785032">+234-807-878-5032</a>
           </span>
 
           <span className="text-[12px] text-white flex gap-1 items-center md:gap-2">
             <Mail fill="white" color="black" size={"14px"} />{" "}
             <a className="" href="mailto:semra@gmail.com">
-              semra@gmail.com
+              semra.suncity@gmail.com
             </a>
           </span>
 
           <span className="text-[12px] text-white flex gap-1 items-center md:gap-2">
             <MapPin fill="white" color="black" size={"14px"} />{" "}
             <a className="" href="mailto:semra@gmail.com">
-              semra@gmail.com
+              No. 2, Niger Crescent, off Main street, Suncity Estate, Abuja
             </a>
           </span>
         </div>
@@ -106,10 +112,10 @@ export default function Nav() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="/events" legacyBehavior passHref>
+              <Link href="/academy" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${
-                    pathname == "/acadamy" && "text-semraGreen"
+                    pathname == "/academy" && "text-semraGreen"
                   }`}
                 >
                   Islamic Academy
@@ -147,5 +153,3 @@ export default function Nav() {
     </>
   );
 }
-
-

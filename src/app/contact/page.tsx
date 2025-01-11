@@ -44,7 +44,7 @@ export default function Contact() {
               href="mailto:hello@semra.com.ng"
               className="hover:text-semraGreen"
             >
-              hello@semra.com.ng
+              semra.suncity@gmail.com
             </Link>
             <Link
               href="https://www.semra.com.ng"
@@ -82,11 +82,11 @@ export default function Contact() {
                 className="absolute left-[62.5px] top-[62.5px]"
               />
             </div>
-            <Link href="tel:09011111111" className="hover:text-semraGreen">
-              +234 888 888 8888
+            <Link href="tel:+2348078785032" className="hover:text-semraGreen">
+              +234-807-878-5032
             </Link>
-            <Link href="tel:09011111111" className="hover:text-semraGreen">
-              +234 888 888 8888
+            <Link href="tel:+2348078785032" className="hover:text-semraGreen">
+              +234-807-878-5032
             </Link>
           </CardContent>
         </Card>
