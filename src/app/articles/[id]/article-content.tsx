@@ -16,14 +16,19 @@ import { type Article } from "@/lib/articles";
 import { formatDistanceToNow } from "date-fns";
 import { BookOpen, Share2 } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ArticleContent({ article }: { article: Article }) {
   const [comment, setComment] = useState("");
   const [name, setName] = useState("");
+    const [isClient, setIsClient] = useState(false); // Track if we are in the client
+
+    useEffect(() => {
+      setIsClient(true); // Set to true when the component mounts
+    }, []);
 
   const handleShare = async () => {
-    if (navigator.share) {
+    if (isClient && navigator.share) {
       try {
         await navigator.share({
           title: article.title,
@@ -93,7 +98,7 @@ export default function ArticleContent({ article }: { article: Article }) {
                 </Button>
                 <Input
                   readOnly
-                  value={window.location.href}
+                  value={isClient ? window.location.href : ""}
                   onClick={(e) => e.currentTarget.select()}
                 />
               </div>
