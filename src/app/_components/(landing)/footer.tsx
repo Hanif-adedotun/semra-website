@@ -20,8 +20,8 @@ export function Footer() {
         </div>
 
         <p className="text-white">
-          Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          To be a renowned Centre for Islamic excellence and broad teaching in
+          Nigeria and beyond.
         </p>
 
         <div className="flex gap-4">
