@@ -12,7 +12,7 @@ export default function Header() {
         </h1>
         <Link href={"/about"}>
           <Button className="bg-semraYellow rounded-md text-white w-full md:w-1/2 mt-8 text-base py-6 px-8 hover:bg-semraYellow/90">
-            Join our Community
+            Join our WhatsApp Community
           </Button>
         </Link>
       </CardContent>

@@ -28,13 +28,13 @@ export default function Nav() {
     <>
       <div className=" hidden md:flex fixed inset-x-0 top-0 z-50 bg-black px-4 h-[40px] items-center w-screen  justify-between px-[10%]">
         <div className="flex justify-center items-end gap-2 md:gap-6">
-          <Image
+          {/* <Image
             src="/icons/palestine.avif"
             width={30}
             height={30}
             alt="Palastine flag"
           />
-          <p className="text-[12px] text-white">May Allah protect Palestine</p>
+          <p className="text-[12px] text-white">May Allah protect Palestine</p> */}
         </div>
         <div className="flex justify-center gap-2 md:gap-8">
           <span className="text-[12px] text-white flex gap-1 items-center md:gap-4">

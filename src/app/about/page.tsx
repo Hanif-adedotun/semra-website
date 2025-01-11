@@ -1,13 +1,27 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { LucidePhoneCall, MailsIcon, MapIcon } from "lucide-react";
-import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
 import Timeline from "./timeline";
+import { readMore } from "@/lib/static";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ChevronDown } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About us",
 };
+
+const coreValues = [
+  ["I", "Integrity"],
+  ["S", "Solidarity"],
+  ["L", "Love"],
+  ["A", "Accountability"],
+  ["M", "Mastery"],
+];
 
 export default function AboutUs() {
   const timelineItems = [
@@ -41,14 +55,13 @@ export default function AboutUs() {
       </h2>
 
       <p className="text-center text-base">
-        Suncity Estate Muslim Resident Association (SEMRA) started in 2010.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Suncity Estate Muslim Residents Association (SEMRA), started as a small
+        gathering of few Muslim residents in Suncity Estate who normally spread
+        their mats and observe daily prayers in a car parking lot donated by one
+        of the brothers on Pomona Street. The small group has evolved to become
+        a large community of Muslim residents in Suncity Estate and is
+        subsequently transitioning to a top-notch Islamic Learning Centre in
+        Abuja.
       </p>
 
       <div className="w-[100%] h-96 md:h-[500px] relative">
@@ -60,7 +73,70 @@ export default function AboutUs() {
         />
       </div>
 
+      <section>
+        <h2 className="font-semibold text-center text-xl mb-12">
+          Aims and Objectives
+        </h2>
+        <div>
+          {" "}
+          To seek the pleasure of Almighty Allah and be rewarded with Al-Jana’ah
+          Firdaus. To bridge the knowledge gap in the understanding of authentic
+          Islamic teachings. To extend humanitarian support to those in need. To
+          inspire the Ummah towards the culture of love for the Beloved
+          Messenger of Allah (PBUH). To spread the message of love, peace and
+          harmony among all the classes of human society.
+        </div>
+
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="text-center font-semibold">Read More <ChevronDown className="ml-2 w-16 h-16"/></AccordionTrigger>
+            <AccordionContent>
+              {readMore}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </section>
+
+      <section>
+        {/* Add image here */}
+        <h2 className="font-semibold text-center text-xl mb-12">Core Values</h2>
+        <section className="flex flex-col gap-6 md:gap-12 md:flex-row">
+          <Image src="/ramadan-podium.png" width={300} height={50} alt="" />
+
+          <div className="flex flex-col">
+            {coreValues.map((value, i) => (
+              <div className="grid grid-cols-2 gap-1 items-center" key={i}>
+                <span className="text-3xl">{value[0]}</span>{" "}
+                <span className="text-md text-left">{value[1]}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2 className="font-semibold text-center text-xl mb-12">
+          Mision & vision
+        </h2>
+        <div>
+          <h3 className="font-semibold text-left text-md mb-4">Our Mision</h3>{" "}
+          To provide the platform for making better Muslims in our community and
+          beyond
+        </div>
+        <div>
+          <h3 className="font-semibold text-left text-md mb-4 mt-4">
+            {" "}
+            Our vision{" "}
+          </h3>
+          To be a renowned Centre for Islamic excellence and broad teaching in
+          Nigeria and beyond
+        </div>
+      </section>
+
       <div className="mx-4 text-wrap">
+        <h2 className="font-semibold text-center text-xl mb-12">
+          Timeline of the formation of semra
+        </h2>
         <Timeline items={timelineItems} />
       </div>
     </div>

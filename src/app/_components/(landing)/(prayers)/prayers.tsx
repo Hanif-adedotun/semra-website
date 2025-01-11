@@ -20,14 +20,13 @@ export default function Timing() {
         <CardContent className="flex flex-col justify-start gap-6 md:gap-12">
           <h1 className="text-2xl font-bold text-primary">Welcome to SEMRA</h1>
           <p>
-            Suncity Estate Muslim Resident Association (SEMRA).Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.{" "}
+            Suncity Estate Muslim Residents Association (SEMRA), started as a
+            small gathering of few Muslim residents in Suncity Estate who
+            normally spread their mats and observe daily prayers in a car
+            parking lot donated by one of the brothers on Pomona Street. The
+            small group has evolved to become a large community of Muslim
+            residents in Suncity Estate and is subsequently transitioning to a
+            top-notch Islamic Learning Centre in Abuja.{" "}
           </p>
           <Link href={"/about"}>
             <Button className="bg-semraYellow rounded-md text-white text-base hover:bg-semraYellow/90">
