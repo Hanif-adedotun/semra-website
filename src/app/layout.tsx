@@ -11,7 +11,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SEMRA",
   description: "Suncity Estate Muslim Resident association",
-  icons: [{ rel: "icon", url: "/icon.png" }],
+  icons: [{ rel: "icon", url: "/semra-logo.jpg" }],
 };
 
 export default function RootLayout({

@@ -45,6 +45,10 @@ export function MobileNav() {
             {""}
           </ListItem>
 
+          <ListItem key={"Articles"} title={"Articles"} href={"/articles"}>
+            {""}
+          </ListItem>
+
           <ListItem key={"contact"} title={"Contact us"} href={"/contact"}>
             {""}
           </ListItem>

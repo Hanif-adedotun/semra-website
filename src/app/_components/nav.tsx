@@ -124,6 +124,18 @@ export default function Nav() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+              <Link href="/articles" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} ${
+                    pathname == "/articles" && "text-semraGreen"
+                  }`}
+                >
+                  Articles
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${
