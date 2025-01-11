@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "About us",
@@ -62,6 +63,26 @@ export default function AboutUs() {
         a large community of Muslim residents in Suncity Estate and is
         subsequently transitioning to a top-notch Islamic Learning Centre in
         Abuja.
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="m-auto my-3">
+              <Button
+                variant={"outline"}
+                className="m-auto text-center text-base font-semibold w-2/5 border-none"
+              >
+                Read More
+                <ChevronDown className=" ml-4 h-4 w-4 shrink-0 transition-transform duration-200 [&[data-state=open]>svg]:rotate-180" />
+              </Button>
+            </AccordionTrigger>
+            <AccordionContent>
+              {readMore.map((read, i) => (
+                <p key={i} className="text-base text-left mb-2">
+                  {read}
+                </p>
+              ))}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </p>
 
       <div className="w-[100%] h-96 md:h-[500px] relative">
@@ -86,15 +107,6 @@ export default function AboutUs() {
           Messenger of Allah (PBUH). To spread the message of love, peace and
           harmony among all the classes of human society.
         </div>
-
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-center font-semibold">Read More <ChevronDown className="ml-2 w-16 h-16"/></AccordionTrigger>
-            <AccordionContent>
-              {readMore}
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
       </section>
 
       <section>

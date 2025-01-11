@@ -6,12 +6,17 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <div className="bg-black z-10 grid grid-cols-1 md:grid-cols-4 w-full min-h-96 mt-48 items-start  gap-10 md:gap-16 p-10 md:p-24">
+    <div className="bg-black z-10 grid grid-cols-1 md:grid-cols-4 w-full min-h-96 mt-48 items-start  gap-10 md:gap-16 p-10 md:p-24 text-sm">
       {/* Section 1 */}
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 justify-start items-center">
-          <Image src="/icon.png" width={50} height={50} alt="logo" />
-          <h1 className="text-white text-2xl font-bold">SEMRA</h1>
+          <Image
+            src="/semra-logo.jpg"
+            width={120}
+            height={50}
+            alt="logo"
+            className="rounded-md"
+          />
         </div>
 
         <p className="text-white">
@@ -27,7 +32,7 @@ export function Footer() {
       </div>
       {/* Section 2 */}
       <div>
-        <h1 className="text-white text-xl font-bold pb-4">Useful Links</h1>
+        <h1 className="text-white text-base font-bold pb-4">Useful Links</h1>
         <Link href={"/about"}>
           <p className="text-white">About Us</p>
         </Link>
@@ -44,7 +49,7 @@ export function Footer() {
 
       {/* Section 3 */}
       <div>
-        <h1 className="text-white text-xl font-bold pb-4">Contact Us</h1>
+        <h1 className="text-white text-base  font-bold pb-4">Contact Us</h1>
         <p className="text-white">Email: semra@gmail.com</p>
         <p className="text-white">Phone: +234 000 000 0000</p>
         <p className="text-white">
@@ -54,7 +59,7 @@ export function Footer() {
 
       {/* Section 4 */}
       <div>
-        <h1 className="text-white text-xl font-bold pb-4">
+        <h1 className="text-white text-base  font-bold pb-4">
           Sign up for our news
         </h1>
         <div className="flex w-full max-w-sm items-center space-x-2">

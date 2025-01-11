@@ -75,8 +75,7 @@ export default function Nav() {
         <NavigationMenuList className="flex justify-between h-14 p-4 items-center w-screen">
           <Link href="/" className="flex items-center" prefetch={false}>
             <div className="flex gap-4 justify-start items-center">
-              <Image src="/icon.png" width={30} height={30} alt="logo" />
-              <h1 className="text-black text-xl font-medium">SEMRA</h1>
+              <Image src="/semra-logo.jpg" width={120} height={50} alt="logo" />
             </div>
             <span className="sr-only">Semra home</span>
           </Link>
@@ -107,6 +106,18 @@ export default function Nav() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
+              <Link href="/events" legacyBehavior passHref>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} ${
+                    pathname == "/acadamy" && "text-semraGreen"
+                  }`}
+                >
+                  Islamic Academy
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${
@@ -124,7 +135,10 @@ export default function Nav() {
           </div>
 
           <div className="hidden md:flex">
-            <Button onClick={() => router.push('/#donate')} className="bg-semraYellow rounded-md text-sm text-white hover:bg-semraYellow/80">
+            <Button
+              onClick={() => router.push("/#donate")}
+              className="bg-semraYellow rounded-md text-sm text-white hover:bg-semraYellow/80"
+            >
               Donate Now
             </Button>
           </div>
